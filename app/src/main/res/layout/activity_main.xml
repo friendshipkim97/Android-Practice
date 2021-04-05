@@ -30,6 +30,17 @@
         android:layout_height="wrap_content"
         android:text="이동"></Button>
 
+    <EditText
+        android:id="@+id/et_save"
+        android:layout_width="100dp"
+        android:layout_height="100dp"></EditText>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sc_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></androidx.appcompat.widget.SwitchCompat>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,14 +50,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/ic_launcher" />
-
-
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-
-
+    </ListView>
 
     <!--    폰트사이즈만큼감싸는것-->
 
