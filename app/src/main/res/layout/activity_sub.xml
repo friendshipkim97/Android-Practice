@@ -20,6 +20,11 @@
         android:layout_height="wrap_content"
         android:text="네비게이트메뉴이동"></Button>
 
+    <WebView
+        android:id="@+id/web_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
 
 
 </LinearLayout>

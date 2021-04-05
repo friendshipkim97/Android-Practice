@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     private SwitchCompat sc_save;
     private String sharedSwitch;
+    private Button custom_move;
+    private Button camera_move;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
         test = (ImageView)findViewById(R.id.test);
         et_save = (EditText)findViewById(R.id.et_save);
         sc_save =(SwitchCompat)findViewById(R.id.sc_save);
+        custom_move = findViewById(R.id.custom_move);
+        camera_move = findViewById(R.id.camera_move);
     }
 
     private void buttonMove() {
@@ -116,6 +120,22 @@ public class MainActivity extends AppCompatActivity {
                   startActivity(intent); // 액티비티 이동
             }
         });
+
+        custom_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NavigateMenuCustom.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+
+        camera_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Camera.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
     }
 
     private void clickImage() {
@@ -126,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 
 }
