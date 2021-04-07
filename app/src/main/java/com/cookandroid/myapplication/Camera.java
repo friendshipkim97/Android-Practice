@@ -39,18 +39,19 @@ public class Camera extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
 
         // 권한 체크
-        TedPermission.with(getApplicationContext())
+        TedPermission.with(getApplicationContext()) // getApplicationContext는 자신이 어떤 어플리케이션을 나타내고 있는지 알려주는 ID역할이다, ActivityManagerService에 접근 할 수 있도록 하는 통로역할
+                                                    // getApplicationContext는 앱에 대한 전역 환경정보를 가지고 있다.
                 .setPermissionListener(permissionListener)
-                .setRationaleMessage("카메라 권한이 필요합니다.")
-                .setDeniedMessage("거부하셨습니다.")
-                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
+                .setRationaleMessage("카메라 권한이 필요합니다.") // 권한을 요청하기 전에 이 권한이 필요한 이유에 대해서 설명함
+                .setDeniedMessage("거부하셨습니다.") // 사용자가 권한을 거부했을 때 보여지는 메세지이다.
+                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA) // 필요한 권한을 넣는다.
                 .check();
 
         findViewById(R.id.btn_capture).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE); // 카메라 앱을띄우는 구문
-                if(intent.resolveActivity(getPackageManager()) != null){
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE); // 카메라 앱을띄우는 구문, 카메라를 불러서 이미지를 캡쳐하고 리턴해준다.
+                if(intent.resolveActivity(getPackageManager()) != null){ // 이 인텐트를 수행할 수 있는 액티비티를 찾는다. ex)태블릿 pc에 카메라가없는경우
                     File photoFile = null;
                     try{
                        photoFile = createImageFile();
@@ -59,7 +60,7 @@ public class Camera extends AppCompatActivity {
                     }
 
                     if(photoFile != null){
-                        photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName(), photoFile);
+                        photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName(), photoFile); // FileProvider는 앱의 내부 파일을 공유하는데 사용된다.
                         intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
                         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE); // 다음
                     }

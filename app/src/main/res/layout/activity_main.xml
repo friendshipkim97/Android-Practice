@@ -54,6 +54,21 @@
         android:text="Camera이동">
     </Button>
 
+    <Button
+        android:id="@+id/recyclerView_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="리사이클러뷰이동">
+    </Button>
+
+    <Button
+        android:id="@+id/fragment_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fragment이동">
+    </Button>
+
+
 
 
     <LinearLayout
@@ -71,7 +86,6 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
     </ListView>
 

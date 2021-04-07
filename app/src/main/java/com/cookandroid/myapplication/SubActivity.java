@@ -32,10 +32,10 @@ public class SubActivity extends AppCompatActivity {
         String str = intent.getStringExtra("str"); // 데이터를 보낼때와 받는 이름이 같아야 한다.
         tv_sub.setText(str);
 
-        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptEnabled(true); // 자바스크립트 허용
         webView.loadUrl(url); // url을 트는 메서드
         webView.setWebChromeClient(new WebChromeClient()); // 구글 크롬브라우저에 최적화
-        webView.setWebViewClient(new WebViewClientClass());
+        webView.setWebViewClient(new WebViewClientClass()); // 페이지 컨트롤을 위한 기본적인 함수, 다양한 요청, 알림을 수신하는 기능을 한다.
     }
 
     @Override

@@ -32,6 +32,7 @@ public class NavigateMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) { //앱의 시작지점
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -55,7 +56,6 @@ public class NavigateMenu extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
     }
 
     @Override
@@ -68,7 +68,7 @@ public class NavigateMenu extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main2, menu);
+        getMenuInflater().inflate(R.menu.main2, menu); // inflate를 통해서 객체를 만듦
         return true;
     }
 

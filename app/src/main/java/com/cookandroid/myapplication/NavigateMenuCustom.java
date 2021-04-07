@@ -19,8 +19,8 @@ public class NavigateMenuCustom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigate_menu_custom);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerView = (View) findViewById(R.id.drawer);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout); // 드로우레이아웃
+        drawerView = (View) findViewById(R.id.drawer); // 눌렀을때 왼쪽에 보이는 메뉴
 
         Button btn_open = (Button) findViewById(R.id.btn_open);
         btn_open.setOnClickListener(new View.OnClickListener() {
