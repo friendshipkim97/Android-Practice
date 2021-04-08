@@ -39,6 +39,9 @@ dependencies {
 
     // 파이어 베이스 추가 
     implementation 'com.google.firebase:firebase-messaging:11.0.4'
+
+    // 로딩화면
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 }
 
 //파이어 베이스 추가

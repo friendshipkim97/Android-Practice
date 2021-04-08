@@ -17,6 +17,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+// 안드로이드 어플리케이션은 Activity, BroadCastReceiver, Content Provider, Service 총 4가지의 부품으로 구성되어 있다.
 public class MainActivity extends AppCompatActivity {
 
     EditText et_id;
@@ -39,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private Button thread_move;
     private Button dialog_move;
     private Button service_move;
+    private Button spinner_move;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { // Activity가 실행되면 가장 먼저 onCreate 메소드가 호출된다.
+
         super.onCreate(savedInstanceState); // 상위 클래스의 onCreate 메소드를 먼저 호출하고 오버라이드된 메서드를 처리한다는 뜻이다.
         setContentView(R.layout.activity_main);
 
@@ -53,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         textSharedPreferences();
         switchSharedPreferences();
 
-
 //        et_id = findViewById(R.id.et_id);
 //        btn_test = findViewById(R.id.btn_test);
 //
@@ -63,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
 //                et_id.setText("김정우");
 //            }
 //        });
-
 
 //        String jung = "정우";
 //        Log.e("MainActivity : ", jung); // Log.e Log.d 활용하기
@@ -123,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         thread_move = findViewById(R.id.thread_move);
         dialog_move = findViewById(R.id.dialog_move);
         service_move = findViewById(R.id.service_move);
+        spinner_move = findViewById(R.id.spinner_move);
     }
 
     private void buttonMove() {
@@ -185,6 +187,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, DialogExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        spinner_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SpinnerExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

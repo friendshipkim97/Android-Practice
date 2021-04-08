@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cookandroid.myapplication">
-<!--    Manifest는 앱에 대한 필수적인 정보를 안드로이드 빌드 툴과 Android OS, 그리고 구글 플레이에 제공한다.-->
+    <!-- Manifest는 앱에 대한 필수적인 정보를 안드로이드 빌드 툴과 Android OS, 그리고 구글 플레이에 제공한다. -->
     <!-- 카메라를 호출해 촬영하기 위한 내부 카메라 모듈 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 찍은 사진을 저장하기 위한 스토리지 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ServiceExam"></activity>
+        <activity android:name=".SpinnerExam"></activity>
+        <activity android:name=".ServiceExam" />
         <activity android:name=".DialogExam" />
         <activity android:name=".ThreadExam" />
         <activity android:name=".Fragment" />
@@ -43,20 +44,16 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>
-
-<!--        음악서비스-->
-        <service android:name=".MusicService"/>
-
-<!--        파이어베이스 서비스-->
+        </provider> <!-- 음악서비스 -->
+        <service android:name=".MusicService" /> <!-- 파이어베이스 서비스 -->
         <service android:name=".FirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service android:name=".FirebaseInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
     </application>

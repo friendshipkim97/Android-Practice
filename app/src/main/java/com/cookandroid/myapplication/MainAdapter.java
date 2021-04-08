@@ -1,4 +1,5 @@
 package com.cookandroid.myapplication;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,15 +24,19 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
 
     @NonNull
     @Override
-    public MainAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { // onCreateView는 처음으로생성될때 실행
-
+    public MainAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { // onCreateViewHolder는 추가버튼을 눌렀을때 실행된다, 다만, 누른횟수가 최대4번이면 지우고 4번까지는 호출되지 않음
+        String jung = "정우";
+        Log.e(jung,"크리에이트뷰홀더");
+        // xml을 객체화함, inflate의 첫번째 파라미터는 만들고 싶은 레이아웃 파일의 id, 2번째 파라미터는 root자리임, 생성될 View의 parent를 명시해준다. 3번째 파라미터는 true로 설정해줄 경우 root의 자식 View로 추가된다.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent, false);
         CustomViewHolder holder = new CustomViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MainAdapter.CustomViewHolder holder, int position) { // 추가될때
+    public void onBindViewHolder(@NonNull final MainAdapter.CustomViewHolder holder, int position) { // 추가될때 이 메서드가 실행된다.
+        String jung = "정우";
+        Log.e(jung,"바인드뷰홀더");
         holder.iv_profile.setImageResource(arrayList.get(position).getIv_profile());
         holder.tv_name.setText(arrayList.get(position).getTv_name());
         holder.tv_content.setText(arrayList.get(position).getTv_content());

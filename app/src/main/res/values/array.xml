@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+        <item>사과</item>
+        <item>배</item>
+        <item>토마토</item>
+
+    </string-array>
+
+</resources>
