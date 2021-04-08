@@ -33,6 +33,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-//    compile 'com.android.support:recyclerview-1.0.2'
+
+    // 리사이클러뷰 추가
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    // 파이어 베이스 추가 
+    implementation 'com.google.firebase:firebase-messaging:11.0.4'
 }
+
+//파이어 베이스 추가
+apply plugin: 'com.google.gms.google-services'

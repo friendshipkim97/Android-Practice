@@ -2,12 +2,10 @@ package com.cookandroid.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private Button camera_move;
     private Button recyclerView_move;
     private Button fragment_move;
+    private Button thread_move;
+    private Button dialog_move;
+    private Button service_move;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
         camera_move = findViewById(R.id.camera_move);
         recyclerView_move = findViewById(R.id.recyclerView_move);
         fragment_move = findViewById(R.id.fragment_move);
+        thread_move = findViewById(R.id.thread_move);
+        dialog_move = findViewById(R.id.dialog_move);
+        service_move = findViewById(R.id.service_move);
     }
 
     private void buttonMove() {
@@ -159,6 +163,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Fragment.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+
+        thread_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ThreadExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        service_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ServiceExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        dialog_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DialogExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

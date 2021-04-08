@@ -68,6 +68,25 @@
         android:text="fragment이동">
     </Button>
 
+    <Button
+        android:id="@+id/thread_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="thread이동">
+    </Button>
+    <Button
+        android:id="@+id/dialog_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog이동">
+    </Button>
+    <Button
+        android:id="@+id/service_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="service이동">
+    </Button>
+
 
 
 
