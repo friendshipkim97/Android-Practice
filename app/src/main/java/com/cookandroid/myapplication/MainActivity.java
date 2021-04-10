@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button dialog_move;
     private Button service_move;
     private Button spinner_move;
+    private Button musicPlayer_move;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // Activity가 실행되면 가장 먼저 onCreate 메소드가 호출된다.
@@ -125,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         dialog_move = findViewById(R.id.dialog_move);
         service_move = findViewById(R.id.service_move);
         spinner_move = findViewById(R.id.spinner_move);
+        musicPlayer_move = findViewById(R.id.musicPlayer_move);
     }
 
     private void buttonMove() {
@@ -194,6 +196,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SpinnerExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        musicPlayer_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MusicPlayerExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SpinnerExam"></activity>
+        <activity android:name=".MusicPlayerExam"></activity>
+        <activity android:name=".SpinnerExam" />
         <activity android:name=".ServiceExam" />
         <activity android:name=".DialogExam" />
         <activity android:name=".ThreadExam" />
