@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
     private Button service_move;
     private Button spinner_move;
     private Button musicPlayer_move;
+    private Button googleMap_move;
+    private Button bottomNavi_move;
+
+    private long backBtnTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // Activity가 실행되면 가장 먼저 onCreate 메소드가 호출된다.
@@ -69,6 +73,20 @@ public class MainActivity extends AppCompatActivity {
 
 //        String jung = "정우";
 //        Log.e("MainActivity : ", jung); // Log.e Log.d 활용하기
+    }
+
+    @Override
+    public void onBackPressed() { // 기존에 한 번 뒤로가기 버튼을 누르면 앱이 꺼졌지만, 이 메서드를 만든 이후로 두번 뒤로가기 눌러야 앱이 종료됨
+        long curTime = System.currentTimeMillis(); // 현재시간 밀리세컨드초로 가져옴
+        long gapTime = curTime - backBtnTime; // 현재시간에서 백버튼 누른시간을 빼줌
+
+        if(0 <= gapTime && 2000 >= gapTime){
+            super.onBackPressed(); // 백버튼을 눌렀을 때 뒤로가기 기능이 활성화된다.
+        }
+        else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void switchSharedPreferences() {
@@ -127,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
         service_move = findViewById(R.id.service_move);
         spinner_move = findViewById(R.id.spinner_move);
         musicPlayer_move = findViewById(R.id.musicPlayer_move);
+        googleMap_move = findViewById(R.id.googleMap_move);
+        bottomNavi_move = findViewById(R.id.bottomNavi_move);
     }
 
     private void buttonMove() {
@@ -203,6 +223,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MusicPlayerExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        googleMap_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GoogleMapExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        bottomNavi_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BottomNaviExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

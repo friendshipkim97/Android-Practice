@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MusicPlayerExam"></activity>
+        <activity android:name=".BottomNaviExam"></activity>
+        <activity android:name=".GoogleMapExam" />
+        <activity android:name=".MusicPlayerExam" />
         <activity android:name=".SpinnerExam" />
         <activity android:name=".ServiceExam" />
         <activity android:name=".DialogExam" />
@@ -56,7 +58,10 @@
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
-        </service>
+        </service> <!-- 구글 api키 등록 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAGUql52p1oiwd3rfleoG1GaCNNZ_ElVhQ" />
     </application>
 
 </manifest>

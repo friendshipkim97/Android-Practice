@@ -8,17 +8,6 @@
     android:scrollbars="vertical"
     tools:context=".MainActivity">
 
-<!--    <EditText-->
-<!--        android:id="@+id/et_id"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="아이디를 입력하세요..."/>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn_test"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="버튼"/>-->
     <com.github.ybq.android.spinkit.SpinKitView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/spin_kit"
@@ -127,17 +116,34 @@
             android:layout_height="wrap_content"
             android:text="musicPlayer이동">
         </Button>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/googleMap_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="googleMap이동">
+    </Button>
+        <Button
+            android:id="@+id/bottomNavi_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bottomNavi이동">
+        </Button>
 
-
-
+</LinearLayout>
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </ListView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -148,6 +154,7 @@
             android:layout_height="100dp"
             android:src="@mipmap/ic_launcher" />
     </LinearLayout>
+
     <!--    폰트사이즈만큼감싸는것-->
 
 

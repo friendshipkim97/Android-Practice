@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_favorite"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="히트"/>
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="집"/>
+    <item
+        android:id="@+id/action_phone"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_phone_black_24dp"
+        android:title="전화"/>
+    <item
+        android:id="@+id/action_face"
+        android:enabled="true"
+        android:icon="@drawable/ic_tag_faces_black_24dp"
+        android:title="얼굴"/>
+    <item
+        android:id="@+id/action_train"
+        android:enabled="true"
+        android:icon="@drawable/ic_train_black_24dp"
+        android:title="기차"/>
+
+</menu>
