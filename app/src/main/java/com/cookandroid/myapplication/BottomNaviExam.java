@@ -21,7 +21,6 @@ public class BottomNaviExam extends AppCompatActivity {
     private Frag4 frag4;
     private Frag5 frag5;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

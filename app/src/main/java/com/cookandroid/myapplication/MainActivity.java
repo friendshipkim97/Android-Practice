@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private Button musicPlayer_move;
     private Button googleMap_move;
     private Button bottomNavi_move;
+    private Button forReuslt_move;
 
     private long backBtnTime = 0;
 
@@ -98,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     private void textSharedPreferences() {
         SharedPreferences sharedPreferences = getSharedPreferences(shared, 0);
         String value = sharedPreferences.getString("jung", ""); // 아무 값도 들어 있지 않으면 ""를 반환하는 것
-        System.out.println("값체크"+value);
         et_save.setText(value);
     }
 
@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         musicPlayer_move = findViewById(R.id.musicPlayer_move);
         googleMap_move = findViewById(R.id.googleMap_move);
         bottomNavi_move = findViewById(R.id.bottomNavi_move);
+        forReuslt_move = findViewById(R.id.forResult_move);
     }
 
     private void buttonMove() {
@@ -237,6 +238,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, BottomNaviExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        forReuslt_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, StartActivityForResultExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });
