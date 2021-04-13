@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private Button googleMap_move;
     private Button bottomNavi_move;
     private Button forReuslt_move;
+    private Button selector_move;
+    private Button registerLogin_move;
 
     private long backBtnTime = 0;
 
@@ -148,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
         googleMap_move = findViewById(R.id.googleMap_move);
         bottomNavi_move = findViewById(R.id.bottomNavi_move);
         forReuslt_move = findViewById(R.id.forResult_move);
+        selector_move = findViewById(R.id.selector_move);
+        registerLogin_move = findViewById(R.id.registerLogin_move);
     }
 
     private void buttonMove() {
@@ -245,6 +249,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StartActivityForResultExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        selector_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SelectorExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        registerLogin_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

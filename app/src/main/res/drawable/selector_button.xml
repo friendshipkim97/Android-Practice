@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    pressed는 눌린 상태를 true, false를 이용해 설정 색상도 되지만 이미지도 변경할 수 있음-->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#7A91FD"/>
+            <corners android:radius="50dp"/>
+        </shape>
+    </item>
+
+<!--    안 눌린 상태의 컽러-->
+    <item android:state_pressed="false">
+    <shape>
+        <solid android:color="#536DFE"/>
+        <corners android:radius="50dp"/>
+    </shape>
+</item>
+
+</selector>
