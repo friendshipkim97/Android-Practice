@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     private Button forReuslt_move;
     private Button selector_move;
     private Button registerLogin_move;
+    private Button broadcastReceiver_move;
+    private Button videoView_move;
 
     private long backBtnTime = 0;
 
@@ -152,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
         forReuslt_move = findViewById(R.id.forResult_move);
         selector_move = findViewById(R.id.selector_move);
         registerLogin_move = findViewById(R.id.registerLogin_move);
+        broadcastReceiver_move = findViewById(R.id.broadcastReceiver_move);
+        videoView_move = findViewById(R.id.videoView_move);
     }
 
     private void buttonMove() {
@@ -263,6 +267,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        broadcastReceiver_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BroadCastReceiverExample.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        videoView_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, VideoViewExample.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

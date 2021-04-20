@@ -160,6 +160,25 @@
             android:layout_height="wrap_content"
             android:text="registerLogin이동">
         </Button>
+        <Button
+            android:id="@+id/broadcastReceiver_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="broadcastReceiver이동">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/videoView_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="videoView이동">
+        </Button>
 
     </LinearLayout>
     <ListView

@@ -7,7 +7,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 권한 선언 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+<!--    BroadCastReceiver할 때 사용 했음 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,8 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RelativeLayoutExam"></activity>
-        <!-- 로그인 액티비티가 빌드시에 가장 첫화면이 되게 한다. -->
+<!--                  스크린을 가로 방향으로-, 액션바없애기-->
+        <activity android:name=".VideoViewExample"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".BroadCastReceiverExample" />
+        <activity android:name=".RelativeLayoutExam" /> <!-- 로그인 액티비티가 빌드시에 가장 첫화면이 되게 한다. -->
         <activity android:name=".LoginActivity">
 
             <!-- <intent-filter> -->
