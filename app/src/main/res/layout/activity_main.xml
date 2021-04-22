@@ -180,6 +180,14 @@
             android:text="videoView이동">
         </Button>
 
+        <Button
+            android:id="@+id/recyclerViewFire_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recyclerViewFire이동">
+        </Button>
+
+
     </LinearLayout>
     <ListView
         android:id="@+id/list"

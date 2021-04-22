@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.cookandroid.myapplication"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -30,6 +30,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
     implementation 'androidx.navigation:navigation-ui:2.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.annotation:annotation:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
@@ -38,7 +39,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     // 파이어 베이스 추가 
-    implementation 'com.google.firebase:firebase-messaging:15.0.0'
+    implementation 'com.google.firebase:firebase-messaging:14.0.0'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
 
     // 로딩화면
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
@@ -53,6 +55,13 @@ dependencies {
 
     // 서버 통신에 필요한 volley 라이브러리
     implementation 'com.android.volley:volley:1.1.1'
+
+    // 이미지를 쉽게 불러오는 라이브러리
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    implementation platform('com.google.firebase:firebase-bom:27.0.0')
+
 }
 
 //파이어 베이스 추가

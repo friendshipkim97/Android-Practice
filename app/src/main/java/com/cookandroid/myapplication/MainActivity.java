@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private Button registerLogin_move;
     private Button broadcastReceiver_move;
     private Button videoView_move;
+    private Button recyclerViewFire_move;
 
     private long backBtnTime = 0;
 
@@ -156,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
         registerLogin_move = findViewById(R.id.registerLogin_move);
         broadcastReceiver_move = findViewById(R.id.broadcastReceiver_move);
         videoView_move = findViewById(R.id.videoView_move);
+        recyclerViewFire_move = findViewById(R.id.recyclerViewFire_move);
     }
 
     private void buttonMove() {
@@ -281,6 +283,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, VideoViewExample.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        recyclerViewFire_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FirebaseListExample.class);
                 startActivity(intent); // 액티비티 이동
             }
         });
