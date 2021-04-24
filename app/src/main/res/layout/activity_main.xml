@@ -184,7 +184,13 @@
             android:id="@+id/recyclerViewFire_move"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="recyclerViewFire이동">
+            android:text="RVFire이동">
+        </Button>
+        <Button
+            android:id="@+id/checkBox_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="checkBox이동">
         </Button>
 
 

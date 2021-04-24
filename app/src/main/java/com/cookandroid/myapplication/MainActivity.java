@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private Button broadcastReceiver_move;
     private Button videoView_move;
     private Button recyclerViewFire_move;
+    private Button checkBox_move;
 
     private long backBtnTime = 0;
 
@@ -158,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
         broadcastReceiver_move = findViewById(R.id.broadcastReceiver_move);
         videoView_move = findViewById(R.id.videoView_move);
         recyclerViewFire_move = findViewById(R.id.recyclerViewFire_move);
+        checkBox_move = findViewById(R.id.checkBox_move);
     }
 
     private void buttonMove() {
@@ -290,6 +292,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, FirebaseListExample.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        checkBox_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CheckBoxExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });
