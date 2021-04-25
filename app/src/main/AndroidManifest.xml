@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckBoxExam"></activity>
+        <activity android:name=".RadioButtonExam"></activity>
+        <activity android:name=".CheckBoxExam" />
         <activity android:name=".FirebaseListExample" />
         <activity android:name=".ConstraintLayoutExam" /> <!-- 스크린을 가로 방향으로-, 액션바없애기 -->
         <activity
