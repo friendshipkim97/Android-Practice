@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private Button checkBox_move;
     private Button radioButton_move;
     private Button viewPager_move;
+    private Button lifeCycle_move;
 
     private long backBtnTime = 0;
 
@@ -164,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         checkBox_move = findViewById(R.id.checkBox_move);
         radioButton_move = findViewById(R.id.radioButton_move);
         viewPager_move = findViewById(R.id.viewPager_move);
+        lifeCycle_move = findViewById(R.id.lifeCycle_move);
     }
 
     private void buttonMove() {
@@ -317,6 +319,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ViewpagerExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        lifeCycle_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LifeCycleExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

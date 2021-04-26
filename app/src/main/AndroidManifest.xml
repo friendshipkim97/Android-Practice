@@ -18,7 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewpagerExam"></activity>
+        <activity android:name=".LifeCycleSubExam" android:theme="@android:style/Theme.Translucent">
+        </activity>
+        <activity android:name=".LifeCycleExam" />
+        <activity android:name=".ViewpagerExam" />
         <activity android:name=".RadioButtonExam" />
         <activity android:name=".CheckBoxExam" />
         <activity android:name=".FirebaseListExample" />
