@@ -18,8 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LifeCycleSubExam" android:theme="@android:style/Theme.Translucent">
-        </activity>
+        <activity android:name=".GoogleLoginResultActiviy"></activity>
+        <activity android:name=".GoogleLoginExam" />
+        <activity
+            android:name=".LifeCycleSubExam"
+            android:theme="@android:style/Theme.Translucent" />
         <activity android:name=".LifeCycleExam" />
         <activity android:name=".ViewpagerExam" />
         <activity android:name=".RadioButtonExam" />
