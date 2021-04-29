@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class GoogleLoginResultActiviy extends AppCompatActivity {
 
     private TextView tv_googleLoginNickName; // 닉네임 Text
     private ImageView iv_googleLoginprofile;
+    private Button btn_googleLogout2;
 
 
     @Override
@@ -29,5 +33,15 @@ public class GoogleLoginResultActiviy extends AppCompatActivity {
 
         iv_googleLoginprofile = findViewById(R.id.iv_googleLoginprofile);
         Glide.with(this).load(photoUrl).into(iv_googleLoginprofile); // 프로필 url을 이미지 뷰에 세팅
+
+        btn_googleLogout2 = findViewById(R.id.btn_googleLogout2);
+        btn_googleLogout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(GoogleLoginResultActiviy.this, GoogleLoginExam.class);
+                startActivity(intent);
+            }
+        });
     }
 }

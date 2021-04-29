@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -41,6 +42,7 @@ public class GoogleLoginExam extends AppCompatActivity implements GoogleApiClien
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_login_exam);
 
+
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -61,6 +63,8 @@ public class GoogleLoginExam extends AppCompatActivity implements GoogleApiClien
                  startActivityForResult(intent, REQ_SIGN_GOOGLE); //
             }
         });
+
+
     }
 
     @Override
