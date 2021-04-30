@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private Button viewPager_move;
     private Button lifeCycle_move;
     private Button googleLogin_move;
+    private Button login2_move;
 
     private long backBtnTime = 0;
 
@@ -168,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager_move = findViewById(R.id.viewPager_move);
         lifeCycle_move = findViewById(R.id.lifeCycle_move);
         googleLogin_move = findViewById(R.id.googleLogin_move);
+        login2_move= findViewById(R.id.login2_move);
     }
 
     private void buttonMove() {
@@ -335,6 +337,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, GoogleLoginExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        login2_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LoginExam2.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

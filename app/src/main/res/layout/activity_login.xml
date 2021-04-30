@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/et_id"
+        android:id="@+id/et_loginEmail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_pass"
+        android:id="@+id/et_loginPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -34,12 +34,12 @@
         android:ems="10"
         android:hint="비밀번호"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/et_id"
-        app:layout_constraintStart_toStartOf="@+id/et_id"
-        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+        app:layout_constraintEnd_toEndOf="@+id/et_loginEmail2"
+        app:layout_constraintStart_toStartOf="@+id/et_loginEmail2"
+        app:layout_constraintTop_toBottomOf="@+id/et_loginEmail2" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_loginButton2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -48,12 +48,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="로그인"
-        app:layout_constraintEnd_toEndOf="@+id/et_pass"
-        app:layout_constraintStart_toStartOf="@+id/et_pass"
-        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+        app:layout_constraintEnd_toEndOf="@+id/et_loginPassword2"
+        app:layout_constraintStart_toStartOf="@+id/et_loginPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/et_loginPassword2" />
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_registerButton2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -62,8 +62,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="회원가입"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/btn_loginButton2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintStart_toStartOf="@+id/btn_loginButton2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_loginButton2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

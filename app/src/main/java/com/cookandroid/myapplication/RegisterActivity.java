@@ -26,12 +26,12 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        et_id = findViewById(R.id.et_id);
-        et_pass = findViewById(R.id.et_pass);
-        et_name = findViewById(R.id.et_pass);
+        et_id = findViewById(R.id.et_loginEmail2);
+        et_pass = findViewById(R.id.et_loginPassword2);
+        et_name = findViewById(R.id.et_loginPassword2);
         et_age = findViewById(R.id.et_age);
 
-        btn_register = findViewById(R.id.btn_register);
+        btn_register = findViewById(R.id.btn_registerButton2);
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

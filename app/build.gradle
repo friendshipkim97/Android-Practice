@@ -75,6 +75,9 @@ dependencies {
     // 파이어베이스 인증2
     implementation 'com.firebaseui:firebase-ui-auth:4.2.1'
 
+    // junit
+    testImplementation 'junit:junit:4.13.2'
+
 
 }
 

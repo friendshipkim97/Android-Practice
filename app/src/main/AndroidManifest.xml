@@ -18,7 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleLoginResultActiviy"></activity>
+        <activity android:name=".SuccessLoginExam"></activity>
+        <activity android:name=".LoginExam2" />
+        <activity android:name=".RegisterExam2" />
+        <activity android:name=".GoogleLoginResultActiviy" />
         <activity android:name=".GoogleLoginExam" />
         <activity
             android:name=".LifeCycleSubExam"
@@ -67,6 +70,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SubActivity" />
         <activity android:name=".MainActivity">
+
+            <!-- intent filter는 시작 액티비티를 지정한다. -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

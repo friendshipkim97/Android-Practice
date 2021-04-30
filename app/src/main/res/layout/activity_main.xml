@@ -239,6 +239,12 @@
             android:layout_height="wrap_content"
             android:text="googleLogin이동">
         </Button>
+        <Button
+            android:id="@+id/login2_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="login2이동">
+        </Button>
     </LinearLayout>
 
     <ListView
