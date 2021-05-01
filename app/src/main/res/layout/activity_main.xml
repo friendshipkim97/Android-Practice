@@ -245,6 +245,12 @@
             android:layout_height="wrap_content"
             android:text="login2이동">
         </Button>
+        <Button
+            android:id="@+id/ViewBinding_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="viewBinding이동">
+        </Button>
     </LinearLayout>
 
     <ListView

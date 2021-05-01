@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // 뷰 바인딩 옵션 활성화
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
