@@ -83,6 +83,9 @@ dependencies {
     // junit
     testImplementation 'junit:junit:4.13.2'
 
+    // cardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
 
 }
 

@@ -253,6 +253,18 @@
         </Button>
     </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/cardView_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cardView이동">
+            </Button>
+        </LinearLayout>
+
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"

@@ -2,6 +2,7 @@ package com.cookandroid.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private Button googleLogin_move;
     private Button login2_move;
     private Button ViewBinding_move;
+    private Button cardView_move;
 
     private long backBtnTime = 0;
 
@@ -172,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         googleLogin_move = findViewById(R.id.googleLogin_move);
         login2_move= findViewById(R.id.login2_move);
         ViewBinding_move = findViewById(R.id.ViewBinding_move);
+        cardView_move = findViewById(R.id.cardView_move);
     }
 
     private void buttonMove() {
@@ -353,6 +356,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ViewBindingExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        cardView_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CardViewExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });
