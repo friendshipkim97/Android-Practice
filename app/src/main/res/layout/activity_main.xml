@@ -263,6 +263,12 @@
                 android:layout_height="wrap_content"
                 android:text="cardView이동">
             </Button>
+            <Button
+                android:id="@+id/bundleFragment_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bundleFragment이동">
+            </Button>
         </LinearLayout>
 
     <ListView

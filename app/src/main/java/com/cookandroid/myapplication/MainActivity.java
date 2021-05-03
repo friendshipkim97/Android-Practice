@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private Button login2_move;
     private Button ViewBinding_move;
     private Button cardView_move;
+    private Button bundleFragment_move;
 
     private long backBtnTime = 0;
 
@@ -175,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
         login2_move= findViewById(R.id.login2_move);
         ViewBinding_move = findViewById(R.id.ViewBinding_move);
         cardView_move = findViewById(R.id.cardView_move);
+        bundleFragment_move = findViewById(R.id.bundleFragment_move);
     }
 
     private void buttonMove() {
@@ -363,6 +365,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CardViewExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        bundleFragment_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FragmentBundleExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });
