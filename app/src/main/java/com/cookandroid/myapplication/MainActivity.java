@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
     private Button ViewBinding_move;
     private Button cardView_move;
     private Button bundleFragment_move;
+    private Button frameLayoutOverlay_move;
+    private Button kakaoLogin_move;
 
     private long backBtnTime = 0;
 
@@ -177,6 +180,9 @@ public class MainActivity extends AppCompatActivity {
         ViewBinding_move = findViewById(R.id.ViewBinding_move);
         cardView_move = findViewById(R.id.cardView_move);
         bundleFragment_move = findViewById(R.id.bundleFragment_move);
+        frameLayoutOverlay_move = findViewById(R.id.frameLayoutOverlay_move);
+        kakaoLogin_move = findViewById(R.id.kakaoLogin_move);
+
     }
 
     private void buttonMove() {
@@ -372,6 +378,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, FragmentBundleExam.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        frameLayoutOverlay_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FrameLayoutOverlay.class);
+                startActivity(intent); // 액티비티 이동
+            }
+        });
+        kakaoLogin_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, KakaoLoginExam.class);
                 startActivity(intent); // 액티비티 이동
             }
         });

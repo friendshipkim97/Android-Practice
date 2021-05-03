@@ -12,13 +12,18 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <application
+        android:usesCleartextTraffic="true"
+        android:name=".CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentBundleExam"></activity>
+        <activity android:name=".KakaoLoginAfter"></activity>
+        <activity android:name=".KakaoLoginExam" />
+        <activity android:name=".FrameLayoutOverlay" />
+        <activity android:name=".FragmentBundleExam" />
         <activity android:name=".CardViewExam" />
         <activity android:name=".ViewBindingExam" />
         <activity android:name=".SuccessLoginExam" />
@@ -104,7 +109,10 @@
         </service> <!-- 구글 api키 등록 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAGUql52p1oiwd3rfleoG1GaCNNZ_ElVhQ" />
+            android:value="AIzaSyAGUql52p1oiwd3rfleoG1GaCNNZ_ElVhQ" /> <!-- kakao 키 등록 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="cc5ea2632f1d5337b5288e2d6fc4b055" />
     </application>
 
 </manifest>

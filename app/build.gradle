@@ -86,6 +86,9 @@ dependencies {
     // cardView
     implementation 'androidx.cardview:cardview:1.0.0'
 
+    // 카카오 로그인
+    implementation 'com.kakao.sdk:usermgmt:1.27.0'
+
 
 }
 

@@ -269,7 +269,26 @@
                 android:layout_height="wrap_content"
                 android:text="bundleFragment이동">
             </Button>
+            <Button
+                android:id="@+id/frameLayoutOverlay_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="frameLayoutOverlay이동">
+            </Button>
         </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/kakaoLogin_move"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kakaoLogin이동">
+                </Button>
+
+            </LinearLayout>
 
     <ListView
         android:id="@+id/list"
